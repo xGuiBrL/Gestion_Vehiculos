@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <!-- ESTA ES LA PARTE DEL VEHÍCULO ESTÁNDAR -->
+        <LinearLayout
+            android:id="@+id/linearVehiculo"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvModelo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:maxLines="1"
+                    android:text="Corolla"
+                    android:textColor="#212121"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:textAlignment="textEnd"
+                    android:id="@+id/tvId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:maxLines="1"
+                    android:text="#1"
+                    android:textColor="#212121"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvMarca"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Marca: Toyota"
+                android:textColor="#757575"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@id/btnEdit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title" />
+            <TextView
+                android:id="@+id/tvAno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Año de fabricación: 2022"
+                android:textColor="#757575"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@id/btnEdit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvMarca" />
+            <TextView
+                android:id="@+id/tvPrecioBase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Precio base: 15000"
+                android:textColor="#757575"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@id/btnEdit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAno" />
+            <TextView
+                android:id="@+id/tvKilometraje"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Kilometraje: 0"
+                android:textColor="#757575"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@id/btnEdit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPrecioBase" />
+            <TextView
+                android:id="@+id/tvEsperanzaVida"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Esperanza de vida: 15"
+                android:textColor="#757575"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@id/btnEdit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvKilometraje" />
+            <TextView
+                android:id="@+id/tvDato1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Consumo combustible: 5.2 L/100km"
+                android:textColor="#757575"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@id/btnEdit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEsperanzaVida" />
+            <TextView
+                android:id="@+id/tvDato2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Potencia de motor: 132 HP"
+                android:textColor="#757575"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@id/btnEdit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDato1" />
+
+        </LinearLayout>
+
+        <!-- ESTA ES LA PARTE DEL VEHÍCULO NUEVO -->
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/linearAutoNuevo"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearVehiculo">
+
+            <TextView
+                android:id="@+id/tvGarantia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Garantía en años: 3"
+                android:textColor="#757575"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@id/btnEdit"
+                app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/tvDescuento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Descuento promocional: 10"
+                android:textColor="#757575"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@id/btnEdit"
+                app:layout_constraintStart_toStartOf="parent" />
+        </LinearLayout>
+
+        <!-- ESTA ES LA PARTE DE MOTO -->
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/linearMoto"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearAutoNuevo">
+
+            <TextView
+                android:id="@+id/tvCilindrada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Cilindrada Cc: 250"
+                android:textColor="#757575"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@id/btnEdit"
+                app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/tvTipoManejo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Tipo de manejo: Off-road"
+                android:textColor="#757575"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@id/btnEdit"
+                app:layout_constraintStart_toStartOf="parent" />
+        </LinearLayout>
+
+        <!-- ESTA ES LA PARTE DE LA MOTO MODIFICADA -->
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/linearMotoModificada"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearMoto">
+
+            <TextView
+                android:id="@+id/tvTipoModificacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Tipo de moficación: Escape"
+                android:textColor="#757575"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@id/btnEdit"
+                app:layout_constraintStart_toStartOf="parent" />
+        </LinearLayout>
+
+
+        <ImageButton
+            android:id="@+id/btnEdit"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Editar item"
+            android:src="@android:drawable/ic_menu_edit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnDelete"/>
+
+        <ImageButton
+            android:id="@+id/btnDelete"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Eliminar item"
+            android:src="@android:drawable/ic_menu_delete"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
